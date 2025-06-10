@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="PortfolioStyle.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #111;
+      padding: 15px;
+      text-align: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      height: 100vh;
+      padding: 100px 20px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    #home { background: #2C6498; }
+    #about { background: #2C6498; }
+    #projects { background: #2C6498; }
+    #contact { background: #2C6498 }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h1>Hello, I'm Mohamad Ali.</h1>
+    <p> Aspiring Game Developer, Software Developer/Engineer, Backend/Frontend. </p>
+    <a href="#projects" class="cta-button">View my work!</a>
+  </section>
+
+ <section id="about" style="background-color: #111">
+  <h2>About</h2>
+  <img src="profilepic.jpg" alt="My Photo" class="profile-pic">
+  <p>I'm passionate about creating games/working on games! As well as learning new coding languages and applying them!</p>
+</section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Some of the work I've done, Hackathons, Projects.</p>
+  </section>
+
+  <section id="contact" style="background-color: #111">
+    <h2>Contacts</h2>
+    <p>Email me at: moezlife347@gmail.com</p>
+  <p>OR<p>
+
+  </p>
+    Questions/Reaching out?</p>
+
+  <form class="contact-form">
+    <input type="text" placeholder="Name" name="name" required>
+    <input type="email" placeholder="Email" name="email" required>
+    <textarea placeholder="Message" name="message" rows="5" required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</section> 
+
+<footer>
+  <p>&copy; 2025 Mohamad Ali <p></p>
+  <p>
+    <a href="https://github.com" target="_blank"> GitHub </a> |
+    <a href="https://www.linkedin.com/in/mohamad-ali-8ab204304/" target="_blank"> LinkedIn </a> |
+    <a href="PortfolioWorks.html"> My Current Work in Progress </a>
+  </p>
+</footer>
+
+</body>
+</html>

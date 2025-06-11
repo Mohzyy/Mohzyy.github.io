@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <meta charset="UTF-8">
-  <title>Mohamad Ali</title>
+  <title>My Portfolio</title>
   <link rel="stylesheet" href="PortfolioStyle.css">
   <style>
     body {
@@ -27,15 +28,13 @@
       font-weight: bold;
     }
     section {
-      height: 100vh;
       padding: 100px 20px 20px;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-    }
+}
     #home { background: #2C6498; }
-    #about { background: #2C6498; }
     #projects { background: #2C6498; }
     #contact { background: #2C6498 }
 
@@ -45,6 +44,15 @@
   </style>
 </head>
 <body>
+  <div class="hamburger" onclick="toggleMenu()">
+  ☰
+</div>
+<nav class="nav-links" id="navMenu">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
 
   <nav>
     <a href="#home">Home</a>
@@ -55,7 +63,7 @@
 
 <section id="home" class="home-content">
   <div class="home-wrapper">
-    <img src="./profilepic.jpg" alt="My Photo" class="profile-pic-left" />
+    <img src="profilepic.jpg" alt="My Photo" class="profile-pic-left" />
     <div class="home-text">
       <h1>Hello, I'm Mohamad Ali.</h1>
       <p>Aspiring Game Developer, Software Developer/Engineer, Backend/Frontend.</p>
@@ -64,19 +72,69 @@
   </div>
 </section>
 
- <section id="about" style="background-color: #111">
-  <h2>About</h2>
-  <p>I'm passionate about creating games/working on games! As well as learning new coding languages and applying them!</p>
+<section id="about" class="about-section">
+  <h2>About Me</h2>
+  <div class="about-wrapper">
+    <div class="about-image">
+      <img src="profilepic.jpg" alt="Mohamad Ali">
+    </div>
+    <div class="about-text">
+      <p>
+        I'm passionate about creating games and working on game development, as well as constantly learning new coding languages and applying them to real-world projects.
+      </p>
+      <p>
+        Playing games while growing up inspired me to develop my own games, understand the technology behind them, and deepen my interest in Computer Science. I enjoy coding, problem solving, and incorporating data structures and algorithms into my projects to strengthen my foundation.
+      </p>
+      <p>
+        Currently, I'm applying for internships while finishing my undergraduate studies to gain more hands-on experience and further grow my skills.
+      </p>
+    </div>
+  </div>
 </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
-    <p>Some of the work I've done, Hackathons, Projects.</p>
+<section id="projects">
+  <h2>Projects</h2>
+  <p>Some of the work I've done, Hackathons, Projects.</p>
 
-    <h3>Coming Soon</h3>
+  <div class="projects-gallery">
+  
+    <div class="project-card">
+      <div class="carousel">
+        <img src="project1-1.jpg" class="carousel-image active" alt="Project 1 Image 1">
+        <img src="project1-2.jpg" class="carousel-image" alt="Project 1 Image 2">
+        <img src="project1-3.jpg" class="carousel-image" alt="Project 1 Image 3">
+      </div>
+      <h3>Project 1, A Runescape Private Server</h3>
+      <p>A fun server I coded and worked on involving backend and server management!</p>
+    </div>
+
+    <div class="project-card">
+      <div class="carousel">
+        <img src="project2-1.jpg" class="carousel-image active" alt="Project 2 Image 1">
+        <img src="project2-2.jpg" class="carousel-image" alt="Project 2 Image 2">
+        <img src="project2-3.jpg" class="carousel-image" alt="Project 2 Image 3">
+      </div>
+      <h3>Project 2, Apps</h3>
+      <p>Creating apps on the Google Play Store and Apple Store.</p>
+    </div>
+
+    <div class="project-card">
+      <div class="carousel">
+        <img src="Destiny 2.webp" class="carousel-image active" alt="Project 3 Image 1">
+        <img src="Destiny 2-2.webp" class="carousel-image" alt="Project 3 Image 2">
+        <img src="Destiny 2-3.webp" class="carousel-image" alt="Project 3 Image 3">
+      </div>
+      <h3>Project 3</h3>
+      <p>Game Development, Software and Update Testing on Games specifically Destiny 2 during 2023 Summer.</p>
   </div>
-  </section>
+  <div class="hackathon-card">
+  <h3>MIT Hackathon 2024/25</h3>
+  <img src="mit-hackathon.png" alt="MIT Hackathon 2024/25">
+  <p> Attended and worked with others during the MIT hackathon.</p>
+</div>
+
+</section>
+
 
   <section id="contact" style="background-color: #111">
     <h2>Contacts</h2>
@@ -95,13 +153,20 @@
 </section> 
 
 <footer>
-  <p>&copy; 2025 Mohamad Ali <p></p>
-  <p>
-    <a href="https://github.com" target="_blank"> GitHub </a> |
-    <a href="https://www.linkedin.com/in/mohamad-ali-8ab204304/" target="_blank"> LinkedIn </a> |
-    <a href="PortfolioWorks.html"> My Current Work in Progress </a>
-  </p>
+  <p>&copy; 2025 Mohamad Ali</p>
+  <div class="social-icons">
+    <a href="https://github.com/Mohzyy" target="_blank" class="icon-link"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/mohamad-ali-8ab204304/" target="_blank" class="icon-link"><i class="fab fa-linkedin"></i></a>
+  </div>
 </footer>
 
+<script src="PortfolioScript.js"></script>
+<script>
+  function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("show");
+  }
+</script>
 </body>
+
 </html>
+

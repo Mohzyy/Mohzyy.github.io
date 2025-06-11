@@ -1,6 +1,10 @@
 html {
   scroll-behavior: smooth;
 }
+#home {
+  height: 100vh;
+  background: #2C6498;
+}
 
 body {
   margin: 0;
@@ -212,3 +216,234 @@ img {
   color: #888;
 }
 }
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 15px;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+.projects-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 100px 0;
+}
+
+.project-card {
+  background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 350px;
+  text-align: center;
+  cursor: pointer;
+  padding-bottom: 20px;
+}
+
+.project-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin: 10px 0 5px 0;
+  color: white;
+}
+
+.project-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  padding: 0 10px;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+
+.carousel-image.active {
+  opacity: 1;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.icon-link {
+  font-size: 2.5rem;
+  color: #f04c4c;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-link:hover {
+  transform: scale(1.2);
+  color: white;
+}
+.about-section {
+  background-color: #111;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.about-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about-image img {
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.about-text {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+}
+
+.hackathon-section {
+  margin-top: 80px;
+  padding: 40px 20px;
+  background-color: #222;
+  color: white;
+  text-align: center;
+}
+
+.hackathon-section h3 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.hackathon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.hackathon-image img {
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.hackathon-text {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.hackathon-text p {
+  margin-bottom: 20px;
+}
+.hackathon-card {
+  background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 350px;
+  text-align: center;
+  margin: 50px auto;
+  padding-bottom: 20px;
+}
+
+.hackathon-card h3 {
+  margin: 20px 0 10px 0;
+  color: white;
+}
+
+.hackathon-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.hackathon-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  padding: 0 10px;
+}
+
